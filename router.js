@@ -43,3 +43,13 @@ router.delete('/:qID/answers/:aID', (req, res)=> {
     body: req.body
   });
 });
+
+router.post('/:qID/answers/:aID/vote-:dec', (req, res)=> {
+  res.json({
+    response: 'voting on answers',
+    question: req.params.qID,
+    answer: req.params.aID,
+    vote: req.params.dec,
+    body: req.body
+  });
+});
